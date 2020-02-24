@@ -1,0 +1,63 @@
+<!-- https://alligator.io/css/css-grid-holy-grail-layout/ -->
+<div class="container">
+  <header>
+    <!-- Header content -->
+    header
+  </header>
+
+  <nav>
+    <!-- Navigation -->
+    navbar
+  </nav>
+
+  <main>
+    <!-- Main content -->
+	main 
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+    footer
+  </footer>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+
+    grid-template-areas:
+      "header header"
+      "nav content"
+      "footer footer";
+
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+
+  header {
+    background-color: red;
+    grid-area: header;
+  }
+
+  nav {
+    background-color: green;
+    grid-area: nav;
+  }
+
+  main {
+    background-color: white;
+    grid-area: content;
+  }
+
+  footer {
+    background-color: blue;
+    grid-area: footer;
+  }
+
+</style>
